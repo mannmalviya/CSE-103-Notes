@@ -1,6 +1,7 @@
 # 📘 CSE103: Computational Models — UCSC Notes
 
-This repository contains my personal lecture notes, exercises, and summaries for **CSE103: Computational Models** at **UC Santa Cruz**. The course explores the theoretical foundations of computer science through formal languages, automata, and complexity theory.
+This repository contains my personal notes(mainly from the lectures and maybe some further elaborations from other sources), for **CSE103: Computational Models** offered at **UC Santa Cruz** taught by assistant prof. Daniel Fremont. The course covers various representations for regular languages, context-free grammars, normal forms, simple parsing, pumping lemmas, Turing machines, the Church-Turing thesis, intractable problems, the P-NP question.
+
 
 ---
 
@@ -35,17 +36,5 @@ This repository contains my personal lecture notes, exercises, and summaries for
 ## 🛠️ Tech Stack
 
 - Written in **LaTeX** for clean, structured mathematical notation
-- Organized by topic for ease of reference
 
 ---
-
-## 📁 Structure
-
-```bash
-CSE103-Notes/
-├── regular-languages.tex
-├── context-free-grammars.tex
-├── turing-machines.tex
-├── undecidability.tex
-├── complexity-theory.tex
-└── ...
