@@ -1,6 +1,6 @@
 # 📘 CSE103: Computational Models — UCSC Notes
 
-This repository contains my personal notes(mainly from the lectures and maybe some further elaborations from other sources), for **CSE103: Computational Models** offered at **UC Santa Cruz** taught by assistant prof. Daniel Fremont. The course covers various representations for regular languages, context-free grammars, normal forms, simple parsing, pumping lemmas, Turing machines, the Church-Turing thesis, intractable problems, the P-NP question.
+This repository contains my personal notes(mainly from the lectures and maybe some further elaborations from other sources), for **CSE103: Computational Models** offered at **UC Santa Cruz** taught by assistant prof. Daniel Fremont in Spring 2025. The course covers various representations for regular languages, context-free grammars, normal forms, simple parsing, pumping lemmas, Turing machines, the Church-Turing thesis, intractable problems, the P-NP question.
 
 
 ---
