@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1744177347.35468 "/home/mann/UCSC_Classes/UCSC_CS_Classes/CSE-103/My Lecture Notes/cse103_lecture_notes.tex" "cse103_lecture_notes.pdf" "cse103_lecture_notes" 1744177348.2376 0
+["pdflatex"] 1744237907.24393 "/home/mann/UCSC_Classes/UCSC_CS_Classes/CSE-103/My Lecture Notes/cse103_lecture_notes.tex" "cse103_lecture_notes.pdf" "cse103_lecture_notes" 1744237908.09553 0
   "/etc/texmf/web2c/texmf.cnf" 1734396507.34475 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/mann/UCSC_Classes/UCSC_CS_Classes/CSE-103/My Lecture Notes/cse103_lecture_notes.tex" 1744177347.11214 10683 4efafb8c9fe26d72fce13a47ec5b79db ""
+  "/home/mann/UCSC_Classes/UCSC_CS_Classes/CSE-103/My Lecture Notes/cse103_lecture_notes.tex" 1744237907.00572 11171 81e242cc8aad45a4c03b416cb558b1ce ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1422827479 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -239,10 +239,10 @@
   "103_TB.png" 1743549000.96526 345565 0b6bc0da3fb6ae6237f4b1fd698fbe46 ""
   "Input.png" 1744170195.84368 11924 6f0294c5e008a3f215797d9edf8d1edf ""
   "computation.png" 1744170221.97652 11844 41a95412d1075dee4848ef218c39c852 ""
-  "cse103_lecture_notes.aux" 1744177348.14016 1705 5a9cacc049695c2362e32bb999f10afe "pdflatex"
-  "cse103_lecture_notes.out" 1744177348.14116 1706 c9da3f5b09835ff4886189f750ac49af "pdflatex"
-  "cse103_lecture_notes.tex" 1744177347.11214 10683 4efafb8c9fe26d72fce13a47ec5b79db ""
-  "cse103_lecture_notes.toc" 1744177348.14116 810 50d254b5c6ff0cd1d3e5b907b354beea "pdflatex"
+  "cse103_lecture_notes.aux" 1744237908.00173 1705 5a9cacc049695c2362e32bb999f10afe "pdflatex"
+  "cse103_lecture_notes.out" 1744237908.00273 1706 c9da3f5b09835ff4886189f750ac49af "pdflatex"
+  "cse103_lecture_notes.tex" 1744237907.00572 11171 81e242cc8aad45a4c03b416cb558b1ce ""
+  "cse103_lecture_notes.toc" 1744237908.00273 810 50d254b5c6ff0cd1d3e5b907b354beea "pdflatex"
   "output.png" 1744174156.85277 12063 7b0c0a4ca35f2415aa9f2f7346f91538 ""
   "procedure.png" 1744174097.73861 12306 2e42a4e093c9791e23e4f743ed4b7e7a ""
   (generated)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.12.16)  8 APR 2025 22:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.12.16)  9 APR 2025 15:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1163,10 +1163,10 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.2pt on input line 237.
  [5 <./output.png>]
-<procedure.png, id=138, 163.0893pt x 17.5857pt>
+<procedure.png, id=139, 163.0893pt x 17.5857pt>
 File: procedure.png Graphic file (type png)
 <use procedure.png>
-Package pdftex.def Info: procedure.png  used on input line 255.
+Package pdftex.def Info: procedure.png  used on input line 256.
 (pdftex.def)             Requested size: 244.63332pt x 26.37845pt.
  [6 <./procedure.png>] [7] 
 enddocument/afterlastpage: lastpage setting LastPage.
@@ -1179,18 +1179,18 @@ Package rerunfilecheck Info: File `cse103_lecture_notes.out' has not changed.
 (rerunfilecheck)             Checksum: C9DA3F5B09835FF4886189F750AC49AF;1706.
  ) 
 Here is how much of TeX's memory you used:
- 31766 strings out of 474222
- 582363 string characters out of 5748732
+ 31773 strings out of 474222
+ 582474 string characters out of 5748732
  1941975 words of memory out of 5000000
- 53408 multiletter control sequences out of 15000+600000
+ 53412 multiletter control sequences out of 15000+600000
  610215 words of font info for 150 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,93p,661b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on cse103_lecture_notes.pdf (7 pages, 511724 bytes).
+Output written on cse103_lecture_notes.pdf (7 pages, 512948 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
  150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
