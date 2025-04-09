@@ -5,3 +5,10 @@
 \contentsline {subsection}{Overview of the Course}{3}{section*.7}%
 \contentsline {subsection}{Learning Objectives}{3}{section*.8}%
 \contentsline {subsection}{Outline of the Course}{3}{section*.9}%
+\contentsline {section}{Lecture 2}{4}{section*.10}%
+\contentsline {subsection}{What is Computation?}{4}{section*.11}%
+\contentsline {subsection}{Input}{4}{section*.13}%
+\contentsline {subsection}{Output}{5}{section*.15}%
+\contentsline {subsection}{Procedure}{6}{section*.17}%
+\contentsline {subsection}{Exercise Solutions}{6}{section*.19}%
+\contentsline {section}{Lecture 3}{7}{section*.20}%
