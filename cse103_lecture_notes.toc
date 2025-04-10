@@ -10,5 +10,16 @@
 \contentsline {subsection}{Input}{4}{section*.13}%
 \contentsline {subsection}{Output}{5}{section*.15}%
 \contentsline {subsection}{Procedure}{6}{section*.17}%
-\contentsline {subsection}{Exercise Solutions}{6}{section*.19}%
-\contentsline {section}{Lecture 3}{7}{section*.20}%
+\contentsline {subsection}{Exercise Solutions}{7}{section*.19}%
+\contentsline {section}{Lecture 3}{8}{section*.20}%
+\contentsline {subsection}{Finite Automata}{8}{section*.21}%
+\contentsline {subsection}{Examples of Finite Automata}{8}{section*.22}%
+\contentsline {subsection}{Deterministic Finite Automata (DFA)}{8}{section*.23}%
+\contentsline {section}{Lecture 4}{9}{section*.24}%
+\contentsline {subsection}{DFAs continued}{9}{section*.25}%
+\contentsline {subsection}{A proof using PMI}{9}{section*.26}%
+\contentsline {subsection}{Extended transition function}{9}{section*.27}%
+\contentsline {section}{Lecture 5}{10}{section*.28}%
+\contentsline {subsection}{Extended transition function continued}{10}{section*.29}%
+\contentsline {subsection}{Some Definitions}{10}{section*.30}%
+\contentsline {subsection}{Nondeterministic Finite Automata (NFA)}{10}{section*.31}%

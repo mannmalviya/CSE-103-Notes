@@ -248,8 +248,20 @@ We will assume a standardized binary encoding of non-string datatypes, so that w
     \end{itemize}
     \begin{tcolorbox} [title= Definition:, colback=black!10!white]
         To fully specify a decision problem, it's enough to identify the strings with answers "YES", this set is called the \textbf{language}\footnotemark{} of the decision problem. A language $\mathcal{L}$ over an alphabet $\Sigma$ is a subset, $\mathcal{L}\subseteq\Sigma^*$.
-    \end{tcolorbox}\end{itemize}
-    \footnotetext{because it's a set of words, an analogy from natural language}
+    \end{tcolorbox}
+    \item The decision problem for $\mathcal{L}$ is to decide whether a given string $w\in\Sigma^*$ is in $\mathcal{L}$, i.e. $w\in\mathcal{L}$?
+    \begin{itemize}
+        \item [$ $] Example: $\mathcal{L}_{\text{PRIME}}=\text{"binary string encoding prime numbers"}$
+        \begin{align*}
+            10 &\in\mathcal{L_\text{PRIME}}\\
+            101 &\in\mathcal{L_\text{PRIME}}\\
+            1001 &\notin\mathcal{L_\text{PRIME}}\\
+        \end{align*}
+    \end{itemize}
+\end{itemize}
+
+\footnotetext{because it's a set of words, an analogy from natural language}
+
 \subsection*{Procedure}
 \addcontentsline{toc}{subsection}{Procedure}
 \begin{figure}[H]
@@ -257,11 +269,35 @@ We will assume a standardized binary encoding of non-string datatypes, so that w
     \caption*{}
 \end{figure}
 
+\begin{itemize}
+    \item In a decision problem, you take in a finite string as input and you need to output either YES or NO, one question is how do you make the decision? Thats where the computational model is going to come in, you can think of the \textbf{procedure} as just a way of computing the mapping from inputs to outputs.
+    \begin{tcolorbox} [title= Definition:, colback=black!10!white]
+        The \textbf{procedure} is a mapping from the inputs to the outputs.
+    \end{tcolorbox}
+    \item You can model the procedure mathematically as just a function, because thats what a function does, it tells you for every possible input, what the output is.
+    \item In general the function can be written as, $$f:\Sigma^*\rightarrow\{\underset{\text{no}}{0},\underset{\text{yes}}{1}\}$$
+    The language $\mathcal{L}$ for $f$ would be the set of all inputs $x$ such that $f(x)=1$, $$ \mathcal{L}=\{x\in\Sigma^*|f(x)=1\}$$
+    \underbar{Note}: A well defined function need not have an actual algorithm for computing $f(x)$ from $x$.
+    \begin{itemize}
+        \item [$ $] Example: 
+        \[
+            f(x) =
+            \begin{cases}
+                1 & \text{if x encodes a python program that terminates}\\
+                0 & \text{otherwise}
+            \end{cases}
+        \]
+        Later we will see that this function is \textbf{not} computed by any algorithm.
+    \end{itemize}
+\end{itemize}
+
+Next lecture we will define \textbf{finite automata} as a restricted class of such functions.
+
 \subsection*{Exercise Solutions}
 \addcontentsline{toc}{subsection}{Exercise Solutions}
 \begin{enumerate}
-    \item 
-    \item 
+    \item 3 symbols to pick since we want to find $|\Sigma^3|$ which only contains words of length 3, we have 3 options fore each symbol($a$,$b$ or $c$) so by the multiplication principle from combinatorics, we have $3\cdot3\cdot3=3^3=27$ words of length 3.
+    \item $|\{a\}^3|=1^3=1$
 \end{enumerate}
 
 \begin{center}
@@ -271,6 +307,63 @@ We will assume a standardized binary encoding of non-string datatypes, so that w
 
 \section*{Lecture 3:}
 \addcontentsline{toc}{section}{Lecture 3}
+
+\subsection*{Finite Automata}
+\addcontentsline{toc}{subsection}{Finite Automata}
+
+\subsection*{Examples of Finite Automata}
+\addcontentsline{toc}{subsection}{Examples of Finite Automata}
+
+\subsection*{Deterministic Finite Automata (DFA)}
+\addcontentsline{toc}{subsection}{Deterministic Finite Automata (DFA)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+	\rule{450pt}{1pt} 
+\end{center}
+\newpage
+
+\section*{Lecture 4:}
+\addcontentsline{toc}{section}{Lecture 4}
+
+\subsection*{DFAs continued}
+\addcontentsline{toc}{subsection}{DFAs continued}
+
+\subsection*{A proof using PMI}
+\addcontentsline{toc}{subsection}{A proof using PMI}
+
+\subsection*{Extended transition function}
+\addcontentsline{toc}{subsection}{Extended transition function}
+
+\begin{center}
+	\rule{450pt}{1pt} 
+\end{center}
+\newpage
+
+
+\section*{Lecture 5:}
+\addcontentsline{toc}{section}{Lecture 5}
+
+\subsection*{Extended transition function continued}
+\addcontentsline{toc}{subsection}{Extended transition function continued}
+
+
+\subsection*{Some Definitions}
+\addcontentsline{toc}{subsection}{Some Definitions}
+
+\subsection*{Nondeterministic Finite Automata (NFA)}
+\addcontentsline{toc}{subsection}{Nondeterministic Finite Automata (NFA)}
 
 
 \end{document}
