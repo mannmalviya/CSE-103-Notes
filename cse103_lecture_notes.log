@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.12.16)  10 APR 2025 00:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.12.16)  14 APR 2025 20:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -578,7 +578,7 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \colbreak@box=\box112
 \mc@col@check@num=\count329
 )
-Package hyperref Info: Option `colorlinks' set `false' on input line 48.
+Package hyperref Info: Option `colorlinks' set `false' on input line 47.
  (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks39
 \pgfutil@tempdima=\dimen194
@@ -966,64 +966,177 @@ LaTeX Info: Redefining \Bbbk on input line 2834.
 LaTeX Info: Redefining \not on input line 2982.
 LaTeX Info: Redefining \textsquare on input line 3012.
 LaTeX Info: Redefining \openbox on input line 3014.
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+) (/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/mathptmx.sty
+Package: mathptmx 2020/03/25 PSNFSS-v9.3 Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/minntx/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/minntx/b/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/ntxmi/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/ntxmi/b/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Encoding `LMS' has changed to `OMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  LMS/ntxsy/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Encoding `LMS' has changed to `OMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LMS/ntxsy/b/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Encoding `LMX' has changed to `OMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  LMX/ntxexx/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Encoding `LMX' has changed to `OMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LMX/ntxexx/b/n --> OMX/ztmcm/m/n on input line 31.
+\symbold=\mathgroup11
+\symitalic=\mathgroup12
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/minntx/b/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/minntx/b/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/minntx/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/minntx/b/it --> OT1/ptm/m/it on input line 35.
+LaTeX Info: Redefining \hbar on input line 50.
+LaTeX Font Info:    Redeclaring math symbol \upGamma on input line 93.
+LaTeX Font Info:    Redeclaring math symbol \upDelta on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \upTheta on input line 95.
+LaTeX Font Info:    Redeclaring math symbol \upLambda on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \upXi on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \upPi on input line 98.
+LaTeX Font Info:    Redeclaring math symbol \upSigma on input line 99.
+LaTeX Font Info:    Redeclaring math symbol \upUpsilon on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \upPhi on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \upPsi on input line 102.
+LaTeX Font Info:    Redeclaring math symbol \upOmega on input line 103.
+) (/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write5
+ Excluding comment 'comment') (/usr/share/texlive/texmf-dist/tex/generic/epsf/epsf.sty
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read6
+\epsfframemargin=\dimen315
+\epsfframethickness=\dimen316
+\epsfrsize=\dimen317
+\epsftmp=\dimen318
+\epsftsize=\dimen319
+\epsfxsize=\dimen320
+\epsfysize=\dimen321
+\pspoints=\dimen322
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen323
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryautomata.code.tex
+File: tikzlibraryautomata.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box133
+\pgfnodeparttwobox=\box134
+\pgfnodepartthreebox=\box135
+\pgfnodepartfourbox=\box136
+\pgfnodeparttwentybox=\box137
+\pgfnodepartnineteenbox=\box138
+\pgfnodeparteighteenbox=\box139
+\pgfnodepartseventeenbox=\box140
+\pgfnodepartsixteenbox=\box141
+\pgfnodepartfifteenbox=\box142
+\pgfnodepartfourteenbox=\box143
+\pgfnodepartthirteenbox=\box144
+\pgfnodeparttwelvebox=\box145
+\pgfnodepartelevenbox=\box146
+\pgfnodeparttenbox=\box147
+\pgfnodepartninebox=\box148
+\pgfnodeparteightbox=\box149
+\pgfnodepartsevenbox=\box150
+\pgfnodepartsixbox=\box151
+\pgfnodepartfivebox=\box152
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen324
+\pgfarrowlength=\dimen325
+\pgfarrowwidth=\dimen326
+\pgfarrowlinewidth=\dimen327
 )
-LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line 59.
+LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line 62.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 59.
+(Font)              scaled to size 10.0pt on input line 62.
  (./cse103_lecture_notes.aux)
 \openout1 = `cse103_lecture_notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 59.
-LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 59.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 62.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 62.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 59.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 59.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 62.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 62.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 59.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 59.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 62.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 62.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 59.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 59.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 62.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 62.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    ... okay on input line 62.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count362
-\scratchdimen=\dimen315
-\scratchbox=\box133
+\scratchdimen=\dimen328
+\scratchbox=\box153
 \nofMPsegments=\count363
 \nofMParguments=\count364
 \everyMPshowfont=\toks58
 \MPscratchCnt=\count365
-\MPscratchDim=\dimen316
+\MPscratchDim=\dimen329
 \MPnumerator=\count366
 \makeMPintoPDFobject=\count367
 \everyMPtoPDFconversion=\toks59
@@ -1067,13 +1180,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 59.
+Package hyperref Info: Link coloring OFF on input line 62.
 (./cse103_lecture_notes.out) (./cse103_lecture_notes.out)
-\@outlinefile=\write5
-\openout5 = `cse103_lecture_notes.out'.
+\@outlinefile=\write6
+\openout6 = `cse103_lecture_notes.out'.
 
-LaTeX Info: Command `\dddot' is already robust on input line 59.
-LaTeX Info: Command `\ddddot' is already robust on input line 59.
+LaTeX Info: Command `\dddot' is already robust on input line 62.
+LaTeX Info: Command `\ddddot' is already robust on input line 62.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
@@ -1082,93 +1195,152 @@ Package caption Info: End \AtBeginDocument code.
 \c@mv@tabular=\count369
 \c@mv@boldtabular=\count370
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 17.28pt on input line 61.
+(Font)              scaled to size 17.28pt on input line 64.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 61.
-LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 61.
- (/usr/share/texlive/texmf-dist/tex/latex/newtx/ot1minntx.fd
-File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
+(Font)              scaled to size 12.0pt on input line 64.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 64.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 64.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 64.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 61.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 64.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 64.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 61.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 64.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 61.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 64.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 64.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 64.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
+
+Missing character: There is no ¹ in font zptmcm7y!
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 62.
+(Font)              scaled to size 14.4pt on input line 64.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 62.
- (./cse103_lecture_notes.toc
+(Font)              scaled to size 14.4pt on input line 64.
+(./cse103_lecture_notes.toc
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+
+Missing character: There is no ¹ in font zptmcm7y!
 )
-\tf@toc=\write6
-\openout6 = `cse103_lecture_notes.toc'.
+\tf@toc=\write7
+\openout7 = `cse103_lecture_notes.toc'.
 
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 69.
-<103_TB.png, id=140, 118.7637pt x 173.6889pt>
+(Font)              scaled to size 12.0pt on input line 71.
+<103_TB.png, id=145, 118.7637pt x 173.6889pt>
 File: 103_TB.png Graphic file (type png)
 <use 103_TB.png>
-Package pdftex.def Info: 103_TB.png  used on input line 76.
+Package pdftex.def Info: 103_TB.png  used on input line 78.
 (pdftex.def)             Requested size: 237.5268pt x 347.37695pt.
  [2 <./103_TB.png>]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 103.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 105.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 103.
+(Font)              scaled to size 10.0pt on input line 105.
  [3{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
-<computation.png, id=165, 163.0893pt x 17.5857pt>
+<computation.png, id=170, 163.0893pt x 17.5857pt>
 File: computation.png Graphic file (type png)
 <use computation.png>
-Package pdftex.def Info: computation.png  used on input line 143.
+Package pdftex.def Info: computation.png  used on input line 145.
 (pdftex.def)             Requested size: 244.63332pt x 26.37845pt.
-<Input.png, id=166, 163.0893pt x 17.5857pt>
+<Input.png, id=171, 163.0893pt x 17.5857pt>
 File: Input.png Graphic file (type png)
 <use Input.png>
-Package pdftex.def Info: Input.png  used on input line 153.
+Package pdftex.def Info: Input.png  used on input line 155.
 (pdftex.def)             Requested size: 244.63332pt x 26.37845pt.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 179.
+(Font)              scaled to size 7.4pt on input line 181.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 179.
- [4 <./computation.png> <./Input.png>]
-<output.png, id=180, 163.0893pt x 17.5857pt>
+(Font)              scaled to size 6.0pt on input line 181.
+
+Missing character: There is no Ï in font zptmcm7y!
+[4{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./computation.png> <./Input.png>]
+Missing character: There is no œ in font zptmcm7y!
+Missing character: There is no Ð in font zptmcm7v!
+<output.png, id=187, 163.0893pt x 17.5857pt>
 File: output.png Graphic file (type png)
 <use output.png>
-Package pdftex.def Info: output.png  used on input line 232.
+Package pdftex.def Info: output.png  used on input line 234.
 (pdftex.def)             Requested size: 244.63332pt x 26.37845pt.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 237.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 237.
- [5 <./output.png>]
-<procedure.png, id=195, 163.0893pt x 17.5857pt>
+(Font)              scaled to size 8.0pt on input line 239.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 239.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 239.
+Missing character: There is no ¹ in font zptmcm7y!
+Missing character: There is no ¹ in font zptmcm7y!
+[5 <./output.png>]
+Missing character: There is no ¹ in font zptmcm7y!
+<procedure.png, id=201, 163.0893pt x 17.5857pt>
 File: procedure.png Graphic file (type png)
 <use procedure.png>
-Package pdftex.def Info: procedure.png  used on input line 268.
+Package pdftex.def Info: procedure.png  used on input line 270.
 (pdftex.def)             Requested size: 244.63332pt x 26.37845pt.
- [6 <./procedure.png>] [7] [8] [9] [10] 
+Missing character: There is no ¹ in font zptmcm7y!
+Missing character: There is no ¹ in font zptmcm7y!
+Missing character: There is no º in font zptmcm7y!
+Missing character: There is no ¹ in font zptmcm7y!
+Missing character: There is no º in font zptmcm7y!
+Missing character: There is no ¹ in font zptmcm7y!
+Missing character: There is no º in font zptmcm7y!
+Missing character: There is no ¹ in font zptmcm7y!
+Missing character: There is no º in font zptmcm7y!
+[6 <./procedure.png>] [7]
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.0pt on input line 332.
+ [8]
+Overfull \hbox (20.56267pt too wide) in paragraph at lines 416--417
+[][] 
+ []
+
+[9] [10]
+Overfull \hbox (1.09993pt too wide) in paragraph at lines 506--507
+[][] 
+ []
+
+[11] [12] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./cse103_lecture_notes.aux)
  ***********
@@ -1176,21 +1348,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `cse103_lecture_notes.out' has not changed.
-(rerunfilecheck)             Checksum: AFDA060DE85CD82118FC671BD65D6E82;3619.
+(rerunfilecheck)             Checksum: 144BECD42489B99210302741057BAEEF;3713.
  ) 
 Here is how much of TeX's memory you used:
- 31803 strings out of 474222
- 582888 string characters out of 5748732
- 1941975 words of memory out of 5000000
- 53428 multiletter control sequences out of 15000+600000
- 610215 words of font info for 150 fonts, out of 8000000 for 9000
+ 33700 strings out of 474222
+ 635457 string characters out of 5748732
+ 1947975 words of memory out of 5000000
+ 55264 multiletter control sequences out of 15000+600000
+ 622473 words of font info for 187 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,93p,661b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on cse103_lecture_notes.pdf (10 pages, 524210 bytes).
+ 84i,12n,93p,661b,951s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
+Output written on cse103_lecture_notes.pdf (12 pages, 554718 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 238 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 314 PDF objects out of 1000 (max. 8388607)
+ 263 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

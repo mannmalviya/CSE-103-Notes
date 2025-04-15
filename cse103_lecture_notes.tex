@@ -39,7 +39,6 @@
 \fancyfoot[C]{\thepage\ of \pageref{LastPage}} % Center-aligned footer with total pages
 
 % Disable red box around page numbers (using hyperref)
-\usepackage{hyperref}
 \hypersetup{
     colorlinks=false, % Enable colored links
     linkcolor=blue,  % Set the color of internal links (like page numbers)
@@ -51,13 +50,16 @@
 \usepackage{xcolor}
 \usepackage{newtxtext,newtxmath}
 
+\usepackage{times,latexsym,mathptmx,comment,latexsym,epsf,amssymb,graphicx,url,enumerate}
+\usetikzlibrary{arrows,positioning,automata}
+\usetikzlibrary{arrows.meta}
+
 
 \title{CSE-103: Computational Models\\ Lecture Notes}
 \author{Mann Malviya}
 \date{Spring 2025}
 
 \begin{document}
-\maketitle
 \maketitle
 \tableofcontents
 \newpage
@@ -317,17 +319,101 @@ Next lecture we will define \textbf{finite automata} as a restricted class of su
 \subsection*{Deterministic Finite Automata (DFA)}
 \addcontentsline{toc}{subsection}{Deterministic Finite Automata (DFA)}
 
+\tikzset{accepting/.style={accepting by double, double distance=3pt}}
+
+The following is all the state machines drawn in this lecture:
+
+\begin{tikzpicture}[scale=2, transform shape, 
+    >=Stealth, 
+    every path/.style={->, >=Stealth, thick}, 
+    tip/.style={scale=1.5}] 
+    \node at (-1, 1) {M};
+    \node[state, initial, initial text=] (s1) {A};
+    \node[below=0cm of s1] {\scriptsize start state};
+    \node[state, accepting, right= of s1] (s2) {B};
+    \node[below=0cm of s2] {\scriptsize accepting state};
+    \path[->]
+        (s1) edge[bend left] node[above] {$1$} (s2)
+        (s1) edge[loop above] node[above] {$0$} (s1)
+        (s2) edge[bend left] node[below] {$1$} (s1)
+        (s2) edge[loop above] node[above] {$0$} (s2)
+        ;
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=2, transform shape, 
+    >=Stealth, 
+    every path/.style={->, >=Stealth, thick}, 
+    tip/.style={scale=1.5}] 
+    \node at (-1, 1) {$\text{M}_1$};
+    \node[state, initial, initial text=] (s1) {};
+    \node[state, accepting, right= of s1] (s2) {};
+    \path[->]
+        (s1) edge[right] node[above]{$1$} (s2)
+        (s1) edge[loop above] node[above]{$0$} (s1)
+        (s2) edge[loop above] node[above]{$0,1$} (s2)
+        ;
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=2, transform shape, 
+    >=Stealth, 
+    every path/.style={->, >=Stealth, thick}, 
+    tip/.style={scale=1.5}] 
+    \node at (-1, 1) {$\text{M}_2$};
+    \node[state, initial, initial text=] (s1) {};
+    \node[state, right= of s1] (s2) {};
+    \node[state, accepting, right= of s2] (s3) {};
+    \path[->]
+        (s1) edge[right] node[above]{$x$} (s2)
+        (s2) edge[right] node[above]{$y$} (s3)
+        (s1) edge[loop above] node[above]{$\Sigma-x$} (s1)
+        (s2) edge[loop above] node[above]{$\Sigma-y$} (s2)
+        (s3) edge[loop above] node[above]{$\Sigma$} (s3)
+    ;
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=2, transform shape, 
+    >=Stealth, 
+    every path/.style={->, >=Stealth, thick}, 
+    tip/.style={scale=1.5}] 
+    \node at (-1.5, 2) {$\text{M}_3$};
+    \node[state, accepting, initial, initial text=] (s1) {};
+    \node[state, above right= of s1] (s2) {};
+    \node[state, below right= of s1] (s3) {};
+    \node[state, accepting, below right= of s2] (s4) {};
+    \path[->]
+        (s1) edge[loop above] node[left]{$\Sigma-\{a,b\}$} (s1)
+        (s1) edge[] node[above]{$a$} (s2)
+        (s1) edge[] node[below]{$b$} (s3)
+        (s2) edge[loop above] node[above]{$\Sigma-b$} (s2)
+        (s2) edge[] node[above]{$b$} (s4)
+        (s4) edge[loop above] node[above]{$\Sigma$} (s4)
+        (s3) edge[loop below] node[below]{$\Sigma-a$} (s3)
+        (s3) edge[] node[below]{$a$} (s4)
+        ;
+\end{tikzpicture}
 
 
 
-
-
-
-
-
-
-
-
+\begin{tikzpicture}[scale=2, transform shape, 
+    >=Stealth, 
+    every path/.style={->, >=Stealth, thick}, 
+    tip/.style={scale=1.5}] 
+    \node at (-1.5, 2) {$\text{M}_4$};
+    \node[state, initial, initial text=] (s1) {1};
+    \node[state, right= of s1] (s2) {2};
+    \node[state, right=of s2] (s3) {3};
+    \node[state, accepting, right=of s3] (s4) {4};
+    \path[->]
+        (s1) edge[loop above] node[above]{$\Sigma-d$} (s1)
+        (s1) edge[] node[above]{$d$} (s2)
+        (s2) edge[loop above] node[above]{$d$} (s2)
+        (s2) edge[] node[above]{$u$} (s3)
+        (s2) edge[bend left=45] node[below]{$\Sigma-\{d,u\}$} (s1)
+        (s3) edge[bend left=90] node[below]{$\Sigma-d$} (s1)
+        (s3) edge[] node[above]{$d$} (s4)
+        (s4) edge[loop above] node[above]{$\Sigma$} (s4)
+        ;
+\end{tikzpicture}
 
 \begin{center}
 	\rule{450pt}{1pt} 
@@ -364,6 +450,97 @@ Next lecture we will define \textbf{finite automata} as a restricted class of su
 
 \subsection*{Nondeterministic Finite Automata (NFA)}
 \addcontentsline{toc}{subsection}{Nondeterministic Finite Automata (NFA)}
+
+The following is all the state machines drawn in this lecture:
+
+\begin{tikzpicture}[scale=2, transform shape, 
+    >=Stealth, 
+    every path/.style={->, >=Stealth, thick}, 
+    tip/.style={scale=1.5}] 
+    \node at (-1, 1) {M};
+    \node[state, accepting, initial, initial text=] (s1) {$1$};
+    \node[state,accepting, right= of s1] (s2) {$2$};
+    \node[state, right= of s2] (s3) {$3$};
+    \path[->]
+        (s1) edge[loop above] node[above]{$y$} (s1)
+        (s1) edge[] node[above]{$x$} (s2)
+        (s2) edge[loop above] node[above]{$y$} (s2)
+        (s2) edge[] node[above]{$x$} (s3)
+        (s3) edge[loop above] node[above]{$x,y$} (s3)
+        ;
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=2, transform shape, 
+    >=Stealth, 
+    every path/.style={->, >=Stealth, thick}, 
+    tip/.style={scale=1.5}] 
+    \node at (-1, 1) {M};
+    \node[state, initial, initial text=] (s1) {A};
+    \node[state, right= of s1] (s2) {B};
+    \node[state, right= of s2] (s3) {C};
+    \node[state, accepting, right= of s3] (s4) {D};
+    \path[->]
+        (s1) edge[loop above] node[above]{$\Sigma$} (s1)
+        (s1) edge[] node[above]{$1$} (s2)
+        (s2) edge[] node[above]{$\Sigma$} (s3)
+        (s3) edge[] node[above]{$\Sigma$} (s4)
+        ;
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=2, transform shape, 
+    >=Stealth, 
+    every path/.style={->, >=Stealth, thick}, 
+    tip/.style={scale=1.5}] 
+    \node at (-1, 1) {NFA:};
+    \node[state, initial, initial text=] (s1) {};
+    \node[state, right= of s1] (s2) {};
+    \node[state, right= of s2] (s3) {};
+    \node[state, accepting, right= of s3] (s4) {};
+    \path[->]
+        (s1) edge[loop above] node[above]{$\Sigma$} (s1)
+        (s1) edge[] node[above]{$d$} (s2)
+        (s2) edge[] node[above]{$u$} (s3)
+        (s3) edge[] node[above]{$d$} (s4)
+        (s4) edge[loop above] node[above]{$\Sigma$} (s4)
+        ;
+\end{tikzpicture}
+
+\begin{center}
+	\rule{450pt}{1pt} 
+\end{center}
+\newpage
+
+\section*{Lecture 6:}
+\addcontentsline{toc}{section}{Lecture 6}
+
+\begin{tikzpicture}[scale=1.5, transform shape, 
+    >=Stealth, 
+    every path/.style={->, >=Stealth, thick}, 
+    tip/.style={scale=1.5}] 
+    \node [state, initial, initial text=] (s1) {1};
+    \node[state, above right= of s1] (s2) {2};
+    \node[state, right= of s2] (s3) {3};
+    \node[state,right= of s3] (s4) {4};
+    \node[state, accepting, right= of s4] (s5) {5};
+    \node[state, below right= of s1] (s6) {6};
+    \node[state, right= of s6] (s7) {7};
+    \node[state, right= of s7] (s8) {8};
+    \node[state, accepting, right= of s8] (s9) {9};
+    \path[->]
+        (s1) edge[] node[above]{$\varepsilon$} (s2)
+        (s1) edge[] node[below]{$\varepsilon$} (s6)
+        (s2) edge[loop above] node[above]{$\Sigma$} (s2)
+        (s2) edge[] node[above]{$d$} (s3)
+        (s3) edge[] node[above]{$u$} (s4)
+        (s4) edge[] node[above]{$d$} (s5)
+        (s5) edge[loop above] node[above]{$\Sigma$} (s5)
+        (s6) edge[loop above] node[above]{$\Sigma$} (s6)
+        (s6) edge[] node[above]{$d$} (s7)
+        (s7) edge[] node[above]{$o$} (s8)
+        (s8) edge[] node[above]{$g$} (s9)   
+        (s9) edge[loop above] node[above]{$\Sigma$} (s9)
+        ;
+\end{tikzpicture}
 
 
 \end{document}
