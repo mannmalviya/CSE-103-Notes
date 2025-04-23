@@ -46,6 +46,9 @@
     pdfborder={0 0 0} % Remove the border around links
 }
 
+% Set the listings font to a darker monospaced font (closer to Sipser's font)
+
+
 \usepackage{tikz,tcolorbox}
 \usepackage{xcolor}
 \usepackage{newtxtext,newtxmath}
@@ -182,7 +185,7 @@ We are building up to a simple model of computation: The Finite Automaton.
     \begin{itemize}
         \item [$ $] Example: $w=110$ then $w_1=1$, $w_2=1$, $w_3=0$.
     \end{itemize}
-    \item Another very common operation we will need to yse on strings is \textbf{concatenation} which is takeing 2 strings and joining them together. We write concatenation as multiplication, so $w=xy$ means $w$ consists of the symbold of $x$ followed by the symbols of $y$.
+    \item Another very common operation we will need to use on strings is \textbf{concatenation} which is taking 2 strings and joining them together. We write concatenation as multiplication, so $w=xy$ means $w$ consists of the symbol of $x$ followed by the symbols of $y$.
     \begin{itemize}
         \item [$ $] Example: $x=001$ and $y=10$ then $xy=00110$ and $yx=10001$. Notice that concatenation is not commutative.
     \end{itemize}
@@ -278,17 +281,17 @@ We will assume a standardized binary encoding of non-string datatypes, so that w
     \end{tcolorbox}
     \item You can model the procedure mathematically as just a function, because thats what a function does, it tells you for every possible input, what the output is.
     \item In general the function can be written as, $$f:\Sigma^*\rightarrow\{\underset{\text{no}}{0},\underset{\text{yes}}{1}\}$$
-    The language $\mathcal{L}$ for $f$ would be the set of all inputs $x$ such that $f(x)=1$, $$ \mathcal{L}=\{x\in\Sigma^*|f(x)=1\}$$
-    \underbar{Note}: A well defined function need not have an actual algorithm for computing $f(x)$ from $x$.
+    The language $\mathcal{L}$ for $f$ would be the set of all inputs $x$ such that $f\left(x\right)=1$, $$ \mathcal{L}=\{x\in\Sigma^*|f(x)=1\}$$
+    \underbar{Note}: A well defined function need not have an actual algorithm for computing $f\left(x\right)$ from $x$.
     \begin{itemize}
         \item [$ $] Example: 
-        \[
-            f(x) =
+        $$
+            f\left(x\right) =
             \begin{cases}
                 1 & \text{if x encodes a python program that terminates}\\
                 0 & \text{otherwise}
             \end{cases}
-        \]
+        $$
         Later we will see that this function is \textbf{not} computed by any algorithm.
     \end{itemize}
 \end{itemize}
@@ -309,9 +312,24 @@ Next lecture we will define \textbf{finite automata} as a restricted class of su
 
 \section*{Lecture 3:}
 \addcontentsline{toc}{section}{Lecture 3}
+Last Lecture we spoke about the process of going from an input to an output(the procedure) we going to talk about several such models, the first being \textbf{Finite Automata}.
 
 \subsection*{Finite Automata}
 \addcontentsline{toc}{subsection}{Finite Automata}
+
+\begin{itemize}
+    \item We will first cover the intuition for finite automata and then cover the formal definition.
+    \item Intuition: Think of finite automata as "computers" with limited memory.
+    \item Programming languages like C/C++ provide mechanisms to allocate new memory, but in finite automaton you cannot do that, you have a fixed amount of memory which is set once and for all and it's independent of the size of the input given.
+    \item There's a convenient way to draw finite automata as directed graphs, representing each state as a node and the arrows/edges between them as transitions, with each edge labeled with the input symbol that causes the transition.
+    \begin{itemize}
+    \item Let $M$ be a machine that reads an input string one symbol at a time.
+    \item The machine $M$ has a \textbf{finite} number of modes or states.
+    \item The machine $M$ remembers things by being in different states.
+    \item The machine \textbf{transitions} to the next state based on the input symbol and the current state.
+    \item After reaching all symbols, $M$ \textbf{accepts}(answer YES) if we end up in an "accepting state" otherwise it \textbf{rejects}(answer NO).
+    \end{itemize}
+\end{itemize}
 
 \subsection*{Examples of Finite Automata}
 \addcontentsline{toc}{subsection}{Examples of Finite Automata}
@@ -405,7 +423,7 @@ The following is all the state machines drawn in this lecture:
     \node[state, accepting, right=of s3] (s4) {4};
     \path[->]
         (s1) edge[loop above] node[above]{$\Sigma-d$} (s1)
-        (s1) edge[] node[above]{$d$} (s2)
+        (s1) edge[] node[above]{\lstinline{1}} (s2)
         (s2) edge[loop above] node[above]{$d$} (s2)
         (s2) edge[] node[above]{$u$} (s3)
         (s2) edge[bend left=45] node[below]{$\Sigma-\{d,u\}$} (s1)
@@ -414,6 +432,26 @@ The following is all the state machines drawn in this lecture:
         (s4) edge[loop above] node[above]{$\Sigma$} (s4)
         ;
 \end{tikzpicture}
+
+\begin{tikzpicture}[shorten >=1pt, node distance=2cm, on grid, auto]
+    % Define states with a grey fill
+    \node[state, fill=gray!15, text=black] (q_0)   {q$_0$}; 
+    \node[state, fill=gray!15, text=black, right=of q_0] (q_1) {q$_1$};
+    \node[state, fill=gray!15, text=black, below=of q_1] (q_2) {q$_2$};
+    
+    % Define the initial and accepting states
+    \path[->]
+    (q_0) edge [loop above] node {\lstinline{0}} ()
+          edge node {1} (q_1)
+    (q_1) edge node {0} (q_2)
+          edge [bend left, above] node {\lstinline{1}} (q_0)
+    (q_2) edge [bend left, below] node[left] {\lstinline{1}} (q_1)
+          edge [loop below] node {\lstinline{0}} ();
+\end{tikzpicture}
+
+
+
+
 
 \begin{center}
 	\rule{450pt}{1pt} 
