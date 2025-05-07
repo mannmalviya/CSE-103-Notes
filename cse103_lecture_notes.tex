@@ -51,12 +51,33 @@
 
 \usepackage{tikz,tcolorbox}
 \usepackage{xcolor}
-\usepackage{newtxtext,newtxmath}
 
 \usepackage{times,latexsym,mathptmx,comment,latexsym,epsf,amssymb,graphicx,url,enumerate}
 \usetikzlibrary{arrows,positioning,automata}
 \usetikzlibrary{arrows.meta}
 
+\tikzset{
+  node distance=1cm, % Minimum distance between two nodes. Change this if you need to.
+  every state/.append style={ % Sets the style of each state
+    semithick,
+    fill=gray!20 % Shade nodes
+  },
+  initial/.append style={
+    initial text={},
+    initial distance=0.5cm % Lengthen the initial arrow
+  },
+  accepting/.append style={ % Set the style of each accepting state
+    double=gray!20, % Shade space between inner and outer circles
+    double distance=4pt, % Space between inner and outer circles
+    outer sep=1pt % Shorten arrows by half of double distance
+  },
+  every edge/.append style={ % Sets the properties for each transition
+    draw,
+    ->, >=Stealth, % Corrected arrowhead specification
+    auto, % Put edge labels to the left
+    semithick
+  }
+}
 
 \title{CSE-103: Computational Models\\ Lecture Notes}
 \author{Mann Malviya}
@@ -322,136 +343,207 @@ Last Lecture we spoke about the process of going from an input to an output(the 
     \item Intuition: Think of finite automata as "computers" with limited memory.
     \item Programming languages like C/C++ provide mechanisms to allocate new memory, but in finite automaton you cannot do that, you have a fixed amount of memory which is set once and for all and it's independent of the size of the input given.
     \item There's a convenient way to draw finite automata as directed graphs, representing each state as a node and the arrows/edges between them as transitions, with each edge labeled with the input symbol that causes the transition.
+    \item Example:
     \begin{itemize}
     \item Let $M$ be a machine that reads an input string one symbol at a time.
     \item The machine $M$ has a \textbf{finite} number of modes or states.
     \item The machine $M$ remembers things by being in different states.
     \item The machine \textbf{transitions} to the next state based on the input symbol and the current state.
     \item After reaching all symbols, $M$ \textbf{accepts}(answer YES) if we end up in an "accepting state" otherwise it \textbf{rejects}(answer NO).
+    \item[$ $] Let M be a finite state machine with alphabet $\Sigma=\{0,1\}$.
+    \begin{center}
+        \begin{tikzpicture}[scale=1.8, transform shape] 
+            \node at (-1, 1) {M};
+            \node[state, initial, initial text=] (s1) {A};
+            \node[below=0cm of s1] {\scriptsize start state};
+            \node[state, accepting, right= of s1] (s2) {B};
+            \node[below=0cm of s2] {\scriptsize accepting state};
+            \path[->]
+                (s1) edge[bend left] node[above] {1} (s2)
+                (s1) edge[loop above] node[above] {0} (s1)
+                (s2) edge[bend left] node[below] {1} (s1)
+                (s2) edge[loop above] node[above] {0} (s2)
+                ;
+        \end{tikzpicture}
+    \end{center}
+    Lets run the automaton on the strings $001$ and $110$ and see whether \lstinline{M} accepts or rejects them.
+    \begin{table}[H]
+        \begin{center}
+
+        \resizebox{0.4\textwidth}{!}{
+            \begin{tabular}{|c|cccc|}
+              \hline
+              string & $0$ & $0$ & $1$ & \\
+              path & $A$ & $A$ & $A$ & $B$\\
+              \hline
+              string & $1$ & $1$ & $0$ & \\
+              path & $A$ & $B$ & $A$ & $A$\\
+              \hline
+            \end{tabular}
+        }
+    \end{center}
+    \end{table}
     \end{itemize}
+    We can see that the automaton M accepts the string $001$ and rejects the string $110$, because $001$ ends in state $A$(which isn't accepting) while $110$ ends in state $B$(which is accepting).
+    $$\mathcal{L}\left(\text{M}\right)=\text{"all strings with an odd number of 1s"}$$
 \end{itemize}
+
+
 
 \subsection*{Examples of Finite Automata}
 \addcontentsline{toc}{subsection}{Examples of Finite Automata}
 
+\begin{itemize}
+    \item \textbf{Example 1:}
+    
+    $\Sigma=\{0,1\}$
+    
+
+    \begin{tikzpicture}[scale=1.7, transform shape] 
+        \node at (-1, 1) {$\text{M}_1$};
+        \node[state, initial, initial text=] (s1) {};
+        \node[state, accepting, right= of s1] (s2) {};
+        \path[->]
+            (s1) edge[right] node[above]{$1$} (s2)
+            (s1) edge[loop above] node[above]{$0$} (s1)
+            (s2) edge[loop above] node[above]{$0,1$} (s2)
+            ;
+    \end{tikzpicture}
+    
+    % Overlaying an arrow with text
+    \begin{tikzpicture}[overlay, scale=1.7, transform shape] 
+        \draw[->, red] (5, 2.15) -- (3.5,2.15) node[pos=0,right] {\scriptsize shorthand for two transitions};
+    \end{tikzpicture}
+
+    We can notice that $M_1$ rejects $\varepsilon$, $0$, $00$, $000$, etc. and accepts $1$, $101$, etc.
+
+    In this DFA the states are acting like memory as they keep track of whether we've seen a $1$ or not.
+    
+    The \textbf{first state} represents: we haven't seen a $1$ yet.
+    
+    The \textbf{second state} represents: we have now seen a $1$.
+    $$\mathcal{L}(M_1) = "\text{all strings containing a $1$}"$$
+
+    \item \textbf{Example 2:}
+    
+    $\Sigma=\{w,x,y,z\}$
+
+    \begin{tikzpicture}[scale=1.7, transform shape] 
+        \node at (-1, 1) {$\text{M}_2$};
+        \node[state, initial, initial text=] (s1) {};
+        \node[state, right= of s1] (s2) {};
+        \node[state, accepting, right= of s2] (s3) {};
+        \path[->]
+            (s1) edge[right] node[above]{$x$} (s2)
+            (s2) edge[right] node[above]{$y$} (s3)
+            (s1) edge[loop above] node[above]{$\Sigma-x$} (s1)
+            (s2) edge[loop above] node[above]{$\Sigma-y$} (s2)
+            (s3) edge[loop above] node[above]{$\Sigma$} (s3)
+        ;
+    \end{tikzpicture}
+    % Overlaying an arrow with text
+    \begin{tikzpicture}[overlay, scale=1.7, transform shape] 
+        \draw[->, red] (-4.4, -0.25) -- (-4.4,0) node[pos=0,below] {\scriptsize haven't seen an $x$};
+        \draw[->, red] (-2.5, -0.5) -- (-2.5,0) node[pos=0,below] {\scriptsize seen $x$ but no $y$ yet};
+        \draw[->, red] (-0.5, -0.25) -- (-0.5,0) node[pos=0,below] {\scriptsize saw an $x$ \& later a $y$};
+    \end{tikzpicture}
+    \vspace{1.5cm}
+
+    $M_2$ rejects $yx$, $xw$, etc. and accepts $xy$, $xyy$, $xwzy$, etc.
+
+    The \textbf{first state} represents: we haven't seen an $x$ yet(because we stay in the state until we see an $x$).
+
+    The \textbf{second state} represents: we have seen an $x$ but since then we have not seen $y$.
+
+    The \textbf{third state} represents: we have seen an $x$ and then we later saw a $y$.
+
+    $$\mathcal{L}(M_2)="\text{all strings which have an $x$ eventually followed by a $y$}"$$
+
+    \item \textbf{Example 3:}
+    
+    $\Sigma=\{a,b,c,...,z\}$
+
+    \begin{tikzpicture}[scale=1.5, transform shape] 
+        \node at (-1.5, 2) {$\text{M}_3$};
+        \node[state, accepting, initial, initial text=] (s1) {};
+        \node[state, above right= of s1] (s2) {};
+        \node[state, below right= of s1] (s3) {};
+        \node[state, accepting, below right= of s2] (s4) {};
+        \path[->]
+            (s1) edge[loop,looseness=8, in=90, out=135] node[left]{$\Sigma-\{a,b\}$} (s1)
+            (s1) edge[bend left] node[above]{$a$} (s2)
+            (s1) edge[bend right] node[below]{$b$} (s3)
+            (s2) edge[loop above] node[above]{$\Sigma-b$} (s2)
+            (s2) edge[bend left] node[above]{$b$} (s4)
+            (s4) edge[loop, looseness=8, in=45, out=90] node[above]{$\Sigma$} (s4)
+            (s3) edge[loop below] node[below]{$\Sigma-a$} (s3)
+            (s3) edge[bend right] node[below]{$a$} (s4)
+            ;
+    \end{tikzpicture}
+
+    $$\mathcal{L}(M_3)="\text{all strings containing either both $a$ and $b$ or neither $a$ nor $b$}"$$
+
+    \item \textbf{Example 4:}
+    
+    $\Sigma=\{a,b,c,...,z\}$
+
+    \begin{tikzpicture}[scale=1.7, transform shape] 
+        \node at (-1.5, 2) {$\text{M}_4$};
+        \node[state, initial, initial text=] (s1) {};
+        \node[state, right= of s1] (s2) {};
+        \node[state, right=of s2] (s3) {};
+        \node[state, accepting, right=of s3] (s4) {};
+        \path[->]
+            (s1) edge[loop above] node[above]{$\Sigma-d$} (s1)
+            (s1) edge[] node[above]{$d$} (s2)
+            (s2) edge[loop above] node[above]{$d$} (s2)
+            (s2) edge[] node[above]{$u$} (s3)
+            (s2) edge[bend left=45] node[below]{$\Sigma-\{d,u\}$} (s1)
+            (s3) edge[bend left=90] node[below]{$\Sigma-d$} (s1)
+            (s3) edge[] node[above]{$d$} (s4)
+            (s4) edge[loop above] node[above]{$\Sigma$} (s4)
+            ;
+    \end{tikzpicture}
+    \begin{tikzpicture}[overlay, scale=1.7, transform shape] 
+        \draw[->, red] (-0.5, 1) -- (-0.5,1.5) node[pos=0,below] {\scriptsize sink state};
+    \end{tikzpicture}
+
+    The accepting state in $M_4$ is a sink state, meaning that once we reach it, we can never leave it.
+    $$\mathcal{L}(M_4)="\text{all strings with a "dud" substring}"$$
+
+\end{itemize}
+
 \subsection*{Deterministic Finite Automata (DFA)}
 \addcontentsline{toc}{subsection}{Deterministic Finite Automata (DFA)}
 
-\tikzset{accepting/.style={accepting by double, double distance=3pt}}
+\begin{tcolorbox} [title= Definition:, colback=black!10!white]
+    A \textbf{DFA}(Deterministic Finite Automata) is a 5-tuple $(Q,\Sigma,\delta,q_0,F)$ where:
+    \begin{itemize}
+        \item[$\bullet$] $Q$ is a finite set of states
+        \item[$\bullet$] $\Sigma$ is a finite alphabet
+        \item[$\bullet$] $\delta:Q\times\Sigma\rightarrow Q$ is the \textbf{transition function}
+        \item[$\bullet$] $q_0\in Q$ is the start  (or initial state)
+        \item[$\bullet$] $F\subseteq Q$ is the set of \textbf{accepting states} (or final states)
+    \end{itemize}
+\end{tcolorbox}
 
-The following is all the state machines drawn in this lecture:
+So we have now covered what a DFA is, but we still need to define how a DFA runs ob a given input string.
 
-\begin{tikzpicture}[scale=2, transform shape, 
-    >=Stealth, 
-    every path/.style={->, >=Stealth, thick}, 
-    tip/.style={scale=1.5}] 
-    \node at (-1, 1) {M};
-    \node[state, initial, initial text=] (s1) {A};
-    \node[below=0cm of s1] {\scriptsize start state};
-    \node[state, accepting, right= of s1] (s2) {B};
-    \node[below=0cm of s2] {\scriptsize accepting state};
-    \path[->]
-        (s1) edge[bend left] node[above] {$1$} (s2)
-        (s1) edge[loop above] node[above] {$0$} (s1)
-        (s2) edge[bend left] node[below] {$1$} (s1)
-        (s2) edge[loop above] node[above] {$0$} (s2)
-        ;
-\end{tikzpicture}
+\begin{tcolorbox} [title= Definition:, colback=black!10!white]
+    A DFA $M$ \textbf{accepts} a string $w=w_1w_2...w_n$ iff there exists an \textbf{accepting path} for $w$: a sequence of states $r_0,r_1,...,r_n$ such that:
+    \begin{enumerate}
+        \item $r_0=q_0$ (start in the start state)
+        \item $r_n\in F$ (end in an accepting state)
+        \item For every $i\in\{0,1,...,n-1\}$, $\delta(r_i,w_{i+1})=r_{i+1}$ (path follows transitions)\footnotemark{}
+    \end{enumerate}
+\end{tcolorbox}
 
-\begin{tikzpicture}[scale=2, transform shape, 
-    >=Stealth, 
-    every path/.style={->, >=Stealth, thick}, 
-    tip/.style={scale=1.5}] 
-    \node at (-1, 1) {$\text{M}_1$};
-    \node[state, initial, initial text=] (s1) {};
-    \node[state, accepting, right= of s1] (s2) {};
-    \path[->]
-        (s1) edge[right] node[above]{$1$} (s2)
-        (s1) edge[loop above] node[above]{$0$} (s1)
-        (s2) edge[loop above] node[above]{$0,1$} (s2)
-        ;
-\end{tikzpicture}
-
-\begin{tikzpicture}[scale=2, transform shape, 
-    >=Stealth, 
-    every path/.style={->, >=Stealth, thick}, 
-    tip/.style={scale=1.5}] 
-    \node at (-1, 1) {$\text{M}_2$};
-    \node[state, initial, initial text=] (s1) {};
-    \node[state, right= of s1] (s2) {};
-    \node[state, accepting, right= of s2] (s3) {};
-    \path[->]
-        (s1) edge[right] node[above]{$x$} (s2)
-        (s2) edge[right] node[above]{$y$} (s3)
-        (s1) edge[loop above] node[above]{$\Sigma-x$} (s1)
-        (s2) edge[loop above] node[above]{$\Sigma-y$} (s2)
-        (s3) edge[loop above] node[above]{$\Sigma$} (s3)
-    ;
-\end{tikzpicture}
-
-\begin{tikzpicture}[scale=2, transform shape, 
-    >=Stealth, 
-    every path/.style={->, >=Stealth, thick}, 
-    tip/.style={scale=1.5}] 
-    \node at (-1.5, 2) {$\text{M}_3$};
-    \node[state, accepting, initial, initial text=] (s1) {};
-    \node[state, above right= of s1] (s2) {};
-    \node[state, below right= of s1] (s3) {};
-    \node[state, accepting, below right= of s2] (s4) {};
-    \path[->]
-        (s1) edge[loop above] node[left]{$\Sigma-\{a,b\}$} (s1)
-        (s1) edge[] node[above]{$a$} (s2)
-        (s1) edge[] node[below]{$b$} (s3)
-        (s2) edge[loop above] node[above]{$\Sigma-b$} (s2)
-        (s2) edge[] node[above]{$b$} (s4)
-        (s4) edge[loop above] node[above]{$\Sigma$} (s4)
-        (s3) edge[loop below] node[below]{$\Sigma-a$} (s3)
-        (s3) edge[] node[below]{$a$} (s4)
-        ;
-\end{tikzpicture}
+\footnotetext{We need to say that you follow transitions properly through the automaton, making sure you didn't just jump around to random states}
 
 
-
-\begin{tikzpicture}[scale=2, transform shape, 
-    >=Stealth, 
-    every path/.style={->, >=Stealth, thick}, 
-    tip/.style={scale=1.5}] 
-    \node at (-1.5, 2) {$\text{M}_4$};
-    \node[state, initial, initial text=] (s1) {1};
-    \node[state, right= of s1] (s2) {2};
-    \node[state, right=of s2] (s3) {3};
-    \node[state, accepting, right=of s3] (s4) {4};
-    \path[->]
-        (s1) edge[loop above] node[above]{$\Sigma-d$} (s1)
-        (s1) edge[] node[above]{\lstinline{1}} (s2)
-        (s2) edge[loop above] node[above]{$d$} (s2)
-        (s2) edge[] node[above]{$u$} (s3)
-        (s2) edge[bend left=45] node[below]{$\Sigma-\{d,u\}$} (s1)
-        (s3) edge[bend left=90] node[below]{$\Sigma-d$} (s1)
-        (s3) edge[] node[above]{$d$} (s4)
-        (s4) edge[loop above] node[above]{$\Sigma$} (s4)
-        ;
-\end{tikzpicture}
-
-\begin{tikzpicture}[shorten >=1pt, node distance=2cm, on grid, auto]
-    % Define states with a grey fill
-    \node[state, fill=gray!15, text=black] (q_0)   {q$_0$}; 
-    \node[state, fill=gray!15, text=black, right=of q_0] (q_1) {q$_1$};
-    \node[state, fill=gray!15, text=black, below=of q_1] (q_2) {q$_2$};
-    
-    % Define the initial and accepting states
-    \path[->]
-    (q_0) edge [loop above] node {\lstinline{0}} ()
-          edge node {1} (q_1)
-    (q_1) edge node {0} (q_2)
-          edge [bend left, above] node {\lstinline{1}} (q_0)
-    (q_2) edge [bend left, below] node[left] {\lstinline{1}} (q_1)
-          edge [loop below] node {\lstinline{0}} ();
-\end{tikzpicture}
-
-
-
-
+\begin{tcolorbox} [title= Definition:, colback=black!10!white]
+    The \textbf{language} $\mathcal{L}(M)$ of $M$ is $\{x\in\Sigma^*\mid M \text{ accepts }x\}$
+\end{tcolorbox}
 
 \begin{center}
 	\rule{450pt}{1pt} 
@@ -491,10 +583,7 @@ The following is all the state machines drawn in this lecture:
 
 The following is all the state machines drawn in this lecture:
 
-\begin{tikzpicture}[scale=2, transform shape, 
-    >=Stealth, 
-    every path/.style={->, >=Stealth, thick}, 
-    tip/.style={scale=1.5}] 
+\begin{tikzpicture}[scale=2] 
     \node at (-1, 1) {M};
     \node[state, accepting, initial, initial text=] (s1) {$1$};
     \node[state,accepting, right= of s1] (s2) {$2$};
@@ -508,10 +597,7 @@ The following is all the state machines drawn in this lecture:
         ;
 \end{tikzpicture}
 
-\begin{tikzpicture}[scale=2, transform shape, 
-    >=Stealth, 
-    every path/.style={->, >=Stealth, thick}, 
-    tip/.style={scale=1.5}] 
+\begin{tikzpicture}[scale=2] 
     \node at (-1, 1) {M};
     \node[state, initial, initial text=] (s1) {A};
     \node[state, right= of s1] (s2) {B};
@@ -525,10 +611,7 @@ The following is all the state machines drawn in this lecture:
         ;
 \end{tikzpicture}
 
-\begin{tikzpicture}[scale=2, transform shape, 
-    >=Stealth, 
-    every path/.style={->, >=Stealth, thick}, 
-    tip/.style={scale=1.5}] 
+\begin{tikzpicture}[scale=2] 
     \node at (-1, 1) {NFA:};
     \node[state, initial, initial text=] (s1) {};
     \node[state, right= of s1] (s2) {};
@@ -551,10 +634,7 @@ The following is all the state machines drawn in this lecture:
 \section*{Lecture 6:}
 \addcontentsline{toc}{section}{Lecture 6}
 
-\begin{tikzpicture}[scale=1.5, transform shape, 
-    >=Stealth, 
-    every path/.style={->, >=Stealth, thick}, 
-    tip/.style={scale=1.5}] 
+\begin{tikzpicture}[scale=1.5] 
     \node [state, initial, initial text=] (s1) {1};
     \node[state, above right= of s1] (s2) {2};
     \node[state, right= of s2] (s3) {3};
